@@ -33,7 +33,7 @@ class UserController extends Controller
     {
         $credentials = $rq->all();
         if (Auth::attempt($credentials)) {
-                return redirect()->
+                return redirect()->route('login');
         }
     }
     public function create()
